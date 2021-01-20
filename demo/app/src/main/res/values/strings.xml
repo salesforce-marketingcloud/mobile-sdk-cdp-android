@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Hello CDP Android</string>
+    <string name="title_sdk_state">SDK State</string>
+    <string name="title_sdk_logs">Logs</string>
+    <string name="consent_switch_label">CONSENT</string>
+    <string name="location_button_label">Set Location</string>
+    <string name="engagement_event_button_label">Engagement Event</string>
+    <string name="profile_event_button_label">Profile Event</string>
+</resources>
