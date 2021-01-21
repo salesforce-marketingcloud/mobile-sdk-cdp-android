@@ -1,0 +1,7 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+com.salesforce.marketingcloud.cdp
+com.salesforce.marketingcloud.cdp.consent
+com.salesforce.marketingcloud.cdp.events
+com.salesforce.marketingcloud.cdp.location
