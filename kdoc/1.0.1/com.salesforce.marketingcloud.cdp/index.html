@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.salesforce.marketingcloud.cdp - cdp</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">cdp</a>&nbsp;/&nbsp;<a href="./index.html">com.salesforce.marketingcloud.cdp</a><br/>
+<br/>
+<h2>Package com.salesforce.marketingcloud.cdp</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-cdp-config/index.html">CdpConfig</a></h4>
+</td>
+<td>
+<p>Create config using the provided Builder
+Provide to <a href="-cdp-sdk/configure.html">CdpSdk.configure</a></p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">CdpConfig</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">CoreModuleConfig</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-cdp-ready-listener/index.html">CdpReadyListener</a></h4>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">CdpReadyListener</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-cdp-sdk/index.html">CdpSdk</a></h4>
+</td>
+<td>
+<p>Main CDP SDK class</p>
+<code><span class="keyword">class </span><span class="identifier">CdpSdk</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">CoreModule</span><span class="symbol">, </span><span class="identifier">CdpAuthenticatorListener</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-cdp-sdk-initialization-status/index.html">CdpSdkInitializationStatus</a></h4>
+</td>
+<td>
+<p>CDP implementation of the SDK initialization interface.</p>
+<code><span class="keyword">class </span><span class="identifier">CdpSdkInitializationStatus</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-initialization-status/index.html"><span class="identifier">InitializationStatus</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-initialization-listener.html">InitializationListener</a></h4>
+</td>
+<td>
+<p>This observer will be notified when the SDK's initialization has been completed.</p>
+<code><span class="keyword">typealias </span><span class="identifier">InitializationListener</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><a href="-initialization-status/index.html"><span class="identifier">InitializationStatus</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-initialization-status/index.html">InitializationStatus</a></h4>
+</td>
+<td>
+<p>The init status interface.</p>
+<code><span class="keyword">interface </span><span class="identifier">InitializationStatus</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-no name provided-.html">&lt;no name provided&gt;</a></h4>
+</td>
+<td>
+<p>Returns a valid instance of <a href="-cdp-sdk/index.html">CdpSdk</a> when it is ready.  If initialization of the SDK
+has already completed then the <a href="-cdp-ready-listener/index.html">CdpReadyListener</a> will be notified immediately.  If
+<a href="-cdp-sdk/configure.html">CdpSdk.configure</a> has not been called, or is executing, <a href="-cdp-ready-listener/index.html">CdpReadyListener</a> will be called
+upon completion.
+
+<strong>Note:</strong>  If <a href="-cdp-sdk/configure.html">CdpSdk.configure</a> completes with a status of <a href="-initialization-status/-f-a-i-l-u-r-e.html">InitializationStatus.FAILURE</a>
+for <a href="-initialization-status/status.html">InitializationStatus.status</a> then then <a href="-cdp-ready-listener/index.html">CdpReadyListener</a> <strong>will not</strong> be called,
+and the current list of <a href="-cdp-ready-listener/index.html">CdpReadyListener</a> listeners will be cleared.</p>
+<code><span class="keyword">fun </span><span class="identifier">&lt;no name provided&gt;</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
