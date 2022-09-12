@@ -1,0 +1,71 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.salesforce.marketingcloud.cdp.consent////PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.consent/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp.consent/Consent.Companion///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.consent/-consent/-companion/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp.consent/Consent.OPT_IN///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.consent/-consent/-o-p-t_-i-n/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp.consent/Consent.OPT_IN/toString/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.consent/-consent/-o-p-t_-i-n/to-string.html
+$dokka.location:com.salesforce.marketingcloud.cdp.consent/Consent.OPT_OUT///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.consent/-consent/-o-p-t_-o-u-t/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp.consent/Consent.OPT_OUT/toString/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.consent/-consent/-o-p-t_-o-u-t/to-string.html
+$dokka.location:com.salesforce.marketingcloud.cdp.consent/Consent.PENDING///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.consent/-consent/-p-e-n-d-i-n-g/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp.consent/Consent.PENDING/toString/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.consent/-consent/-p-e-n-d-i-n-g/to-string.html
+$dokka.location:com.salesforce.marketingcloud.cdp.consent/Consent///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.consent/-consent/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp.events////PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.events/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp.events/Event.Companion///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.events/-event/-companion/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp.events/Event.Companion/engagement/#kotlin.String#kotlin.collections.Map[kotlin.String,kotlin.Any?]?#kotlin.Boolean#kotlin.String?/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.events/-event/-companion/engagement.html
+$dokka.location:com.salesforce.marketingcloud.cdp.events/Event.Companion/getAdvertisingId/#android.content.Context#kotlin.Function1[kotlin.String,kotlin.Unit]/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.events/-event/-companion/get-advertising-id.html
+$dokka.location:com.salesforce.marketingcloud.cdp.events/Event.Companion/profile/#kotlin.String#kotlin.collections.Map[kotlin.String,kotlin.Any?]?#kotlin.String?/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.events/-event/-companion/profile.html
+$dokka.location:com.salesforce.marketingcloud.cdp.events/Event///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.events/-event/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp.events/Event/attributes/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.events/-event/attributes.html
+$dokka.location:com.salesforce.marketingcloud.cdp.events/Event/eventType/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.events/-event/event-type.html
+$dokka.location:com.salesforce.marketingcloud.cdp.events/Event/id/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.events/-event/id.html
+$dokka.location:com.salesforce.marketingcloud.cdp.location////PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.location/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp.location/Coordinates///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.location/-coordinates/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp.location/Coordinates/Coordinates/#kotlin.Double#kotlin.Double/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.location/-coordinates/-coordinates.html
+$dokka.location:com.salesforce.marketingcloud.cdp.location/Coordinates/latitude/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.location/-coordinates/latitude.html
+$dokka.location:com.salesforce.marketingcloud.cdp.location/Coordinates/longitude/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp.location/-coordinates/longitude.html
+$dokka.location:com.salesforce.marketingcloud.cdp////PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig.Builder///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/-builder/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig.Builder/Builder/#android.content.Context#kotlin.String#kotlin.String/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/-builder/-builder.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig.Builder/appId/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/-builder/app-id.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig.Builder/build/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/-builder/build.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig.Builder/context/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/-builder/context.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig.Builder/endpoint/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/-builder/endpoint.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig.Builder/sessionTimeout/#kotlin.Long/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/-builder/session-timeout.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig.Builder/trackLifecycle/#kotlin.Boolean/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/-builder/track-lifecycle.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig.Builder/trackScreens/#kotlin.Boolean/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/-builder/track-screens.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig.Companion///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/-companion/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig/appId/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/app-id.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig/context/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/context.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig/endpoint/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/endpoint.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig/init/#android.content.Context#com.salesforce.marketingcloud.sfmcsdk.SFMCSdkComponents#com.salesforce.marketingcloud.sfmcsdk.modules.ModuleReadyListener/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/init.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig/sessionTimeoutInSeconds/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/session-timeout-in-seconds.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig/trackLifecycle/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/track-lifecycle.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpConfig/trackScreens/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-config/track-screens.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpReadyListener///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-ready-listener/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpReadyListener/ready/#com.salesforce.marketingcloud.cdp.CdpSdk/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-ready-listener/ready.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdk.Companion///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk/-companion/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdk.Companion/configure/#com.salesforce.marketingcloud.cdp.CdpConfig#com.salesforce.marketingcloud.sfmcsdk.SFMCSdkComponents#kotlin.Function1[com.salesforce.marketingcloud.cdp.InitializationStatus,kotlin.Unit]?/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk/-companion/configure.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdk.Companion/logLevel/#com.salesforce.marketingcloud.sfmcsdk.components.logging.LogLevel#com.salesforce.marketingcloud.sfmcsdk.components.logging.LogListener?/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk/-companion/log-level.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdk.Companion/requestSdk/#com.salesforce.marketingcloud.cdp.CdpReadyListener/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk/-companion/request-sdk.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdk.Companion/unregisterWhenReadyListener/#com.salesforce.marketingcloud.cdp.CdpReadyListener?/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk/-companion/unregister-when-ready-listener.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdk///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdk/components/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk/components.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdk/consent/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk/consent.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdk/moduleIdentity/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk/module-identity.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdk/onTenantDeprovisioned/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk/on-tenant-deprovisioned.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdk/setLocation/#com.salesforce.marketingcloud.cdp.location.Coordinates?#kotlin.Long/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk/set-location.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdk/state/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk/state.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdk/track/#com.salesforce.marketingcloud.cdp.events.Event?/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk/track.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdkInitializationStatus///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk-initialization-status/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp/CdpSdkInitializationStatus/status/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-cdp-sdk-initialization-status/status.html
+$dokka.location:com.salesforce.marketingcloud.cdp/InitializationStatus.Companion///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-initialization-status/-companion/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp/InitializationStatus.Companion/FAILURE/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-initialization-status/-companion/-f-a-i-l-u-r-e.html
+$dokka.location:com.salesforce.marketingcloud.cdp/InitializationStatus.Companion/SUCCESS/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-initialization-status/-companion/-s-u-c-c-e-s-s.html
+$dokka.location:com.salesforce.marketingcloud.cdp/InitializationStatus///PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-initialization-status/index.html
+$dokka.location:com.salesforce.marketingcloud.cdp/InitializationStatus/status/#/PointingToDeclaration/cdp/com.salesforce.marketingcloud.cdp/-initialization-status/status.html
+com.salesforce.marketingcloud.cdp
+com.salesforce.marketingcloud.cdp.consent
+com.salesforce.marketingcloud.cdp.events
+com.salesforce.marketingcloud.cdp.location
+
