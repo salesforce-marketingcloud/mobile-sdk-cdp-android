@@ -50,13 +50,19 @@ class SdkStateFragment : Fragment() {
         // Track Engagement Event
         val engagementButton: Button = root.findViewById(R.id.btn_engagement)
         engagementButton.setOnClickListener {
-            sdkStateViewModel.trackEngagementEvent()
+            sdkStateViewModel.trackSampleEngagementEvents()
         }
 
         // Track Profile Event
         val profileButton: Button = root.findViewById(R.id.btn_profile)
         profileButton.setOnClickListener {
-            sdkStateViewModel.trackProfileEvent("John Doe")
+            sdkStateViewModel.trackSampleProfileEvents()
+        }
+
+        // Set Contact Key
+        val contactKeyButton: Button = root.findViewById(R.id.btn_contactKey)
+        contactKeyButton.setOnClickListener {
+            sdkStateViewModel.setContactKey()
         }
 
         sdkStateViewModel.message.observe(viewLifecycleOwner, {
