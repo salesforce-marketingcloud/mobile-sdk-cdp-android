@@ -4,6 +4,7 @@
     <string name="title_sdk_logs">Logs</string>
     <string name="consent_switch_label">CONSENT</string>
     <string name="location_button_label">Set Location</string>
-    <string name="engagement_event_button_label">Engagement Event</string>
-    <string name="profile_event_button_label">Profile Event</string>
+    <string name="contactKey_button_label">Set Contact Key</string>
+    <string name="engagement_event_button_label">Track Engagement</string>
+    <string name="profile_event_button_label">Track Profile</string>
 </resources>
