@@ -110,7 +110,7 @@ class SdkStateViewModel : ViewModel() {
             )
         )
         event?.track()
-        refreshStateWithMessage("Catalog event tracked: ${event?.attributes()}")
+        refreshStateWithMessage("Cart event tracked: ${event?.attributes()}")
     }
 
     /**
