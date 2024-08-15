@@ -5,6 +5,7 @@ import android.content.Context
 import android.util.Log
 //import com.salesforce.marketingcloud.MarketingCloudConfig
 import com.salesforce.marketingcloud.cdp.CdpConfig
+import com.salesforce.marketingcloud.cdp.CdpSdk
 import com.salesforce.marketingcloud.cdp.InitializationStatus
 //import com.salesforce.marketingcloud.notifications.NotificationCustomizationOptions
 import com.salesforce.marketingcloud.sfmcsdk.SFMCSdk
@@ -33,6 +34,7 @@ class HelloCdpApp : Application() {
         // https://developer.salesforce.com/docs/atlas.en-us.c360a_api.meta/c360a_api/c360a_api_engagement_mobile_sdk_logging_and_debugging.htm
         if (BuildConfig.DEBUG) {
             SFMCSdk.setLogging(LogLevel.DEBUG, getLogListener())
+            CdpSdk.logLevel(LogLevel.DEBUG, getLogListener())
         }
 
         // Initialize SDK
