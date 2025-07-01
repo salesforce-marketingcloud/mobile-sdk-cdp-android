@@ -7,11 +7,13 @@
     <release>2.0.4</release>
     <versions>
       <version>2.0.4</version>
+      <version>2.0.3</version>
+      <version>2.0.2</version>
+      <version>2.0.1</version>
+      <version>1.0.1</version>
+      <version>1.0.0</version>
+      <version>2.0.4</version>
     </versions>
-<<<<<<< HEAD
     <lastUpdated>20250627215133</lastUpdated>
-=======
-    <lastUpdated>20250627212552</lastUpdated>
->>>>>>> 7ca2cb9 (Release 2.0.4)
   </versioning>
 </metadata>
