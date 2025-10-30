@@ -260,13 +260,12 @@ class SdkStateViewModel : ViewModel() {
      */
     fun trackSampleProfileEvents() {
         SFMCSdk.requestSdk { sdk ->
-            sdk.identity.setProfileAttributes(
+            sdk.identity.edit {
+                attributes.putAll(
                 sampleIdentity()
                         + sampleContactPointEmail()
                         + sampleContactPointPhone()
-                        + sampleContactPointAddress(),
-                ModuleIdentifier.CDP // if you leave out ModuleIdentifier attributes will be set on all modules (CDP & PUSH)
-            )
+                        + sampleContactPointAddress()) }
             refreshStateWithMessage("Profile events tracked.")
         }
 
@@ -288,7 +287,9 @@ class SdkStateViewModel : ViewModel() {
     fun toggleAnonymous(anonymous: Boolean) {
         SFMCSdk.requestSdk { sdk ->
             val anonymousVal = if (anonymous) "1" else "0"
-            sdk.identity.setProfileAttribute("isAnonymous", anonymousVal, ModuleIdentifier.CDP)
+            sdk.identity.edit {
+                attributes.put("isAnonymous", anonymousVal)
+            }
 
             refreshStateWithMessage("identity isAnonymous: $anonymousVal")
         }
@@ -352,7 +353,9 @@ class SdkStateViewModel : ViewModel() {
      */
     fun setContactKey(contactKey: String = UUID.randomUUID().toString()) {
         SFMCSdk.requestSdk { sdk ->
-            sdk.identity.setProfileId(contactKey, ModuleIdentifier.PUSH) // PUSH contactKey/subscriberKey -> CDP userId
+            sdk.identity.edit {
+                profileId = contactKey
+            } // PUSH contactKey/subscriberKey -> CDP userId
 
             refreshStateWithMessage("contactKey Set: $contactKey")
         }
