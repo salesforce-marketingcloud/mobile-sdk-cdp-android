@@ -4,10 +4,12 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url uri('/Users/srobichaud/source/MobileSdk/android/staging/mobile-sdk-cdp-android/repository') }
+        maven { url uri('/Users/srobichaud/source/MobileSdk/android/staging/MarketingCloudSdk-Android/repository') }
         maven { url "https://salesforce-marketingcloud.github.io/MarketingCloudSDK-Android/repository" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.2'
+        classpath 'com.android.tools.build:gradle:8.13.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.salesforce.marketingcloud:version-safety-plugin:latest.release'
 
@@ -20,6 +22,8 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url uri('/Users/srobichaud/source/MobileSdk/android/staging/mobile-sdk-cdp-android/repository') }
+        maven { url uri('/Users/srobichaud/source/MobileSdk/android/staging/MarketingCloudSdk-Android/repository') }
         maven { url "https://salesforce-marketingcloud.github.io/MarketingCloudSDK-Android/repository" }
         maven { url "https://salesforce-marketingcloud.github.io/mobile-sdk-cdp-android/repository" }
     }

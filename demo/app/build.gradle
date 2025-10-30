@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 36
 
     defaultConfig {
         applicationId "com.salesforce.marketingcloud.hellocdpandroid"
@@ -24,12 +24,13 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
+    namespace 'com.salesforce.marketingcloud.hellocdpandroid'
 }
 
 dependencies {
@@ -49,6 +50,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    implementation 'com.salesforce.marketingcloud:cdp:2.0.+'
+    implementation 'com.salesforce.marketingcloud:cdp:3.0.0'
 //    implementation 'com.salesforce.marketingcloud:marketingcloudsdk:8.0.+' // Only if you're also using the Marketing Cloud PUSH module.
 }
