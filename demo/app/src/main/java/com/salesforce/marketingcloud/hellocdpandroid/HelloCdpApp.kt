@@ -69,10 +69,8 @@ class HelloCdpApp : Application() {
     private fun getCdpModuleConfig(context: Context): CdpConfig {
 
         // TODO: Replace CDP (Customer Data Platform) properties
-//        val appId = "{appIdFromMobileConnector}"
-//        val endpoint = "https://{endpointFromMobileConnector}"
-        val appId = "dadf9058-b269-4296-9248-404bd86fd91d"
-        val endpoint = "https://gm4gg9dgmztdkzrvh13dqmt0gm.pc-rnd.c360a.salesforce.com"
+        val appId = "{appIdFromMobileConnector}"
+        val endpoint = "https://{endpointFromMobileConnector}"
 
         /**
          * Capturing Behavior Data (Screen & Lifecycle Events)
@@ -82,8 +80,8 @@ class HelloCdpApp : Application() {
          * https://developer.salesforce.com/docs/atlas.en-us.236.0.c360a_api.meta/c360a_api/c360a_api_engagement_mobile_sdk_behavior_schema.htm
          */
         return CdpConfig.Builder(context, appId, endpoint)
-            .trackScreens(false) // default false
-            .trackLifecycle(false) // default false
+            .trackScreens(true) // default false
+            .trackLifecycle(true) // default false
             .sessionTimeout(600) // default 600
             .build()
     }
