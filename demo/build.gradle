@@ -4,8 +4,6 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven { url uri('/Users/srobichaud/source/MobileSdk/android/staging/mobile-sdk-cdp-android/repository') }
-        maven { url uri('/Users/srobichaud/source/MobileSdk/android/staging/MarketingCloudSdk-Android/repository') }
         maven { url "https://salesforce-marketingcloud.github.io/MarketingCloudSDK-Android/repository" }
     }
     dependencies {
@@ -22,8 +20,6 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url uri('/Users/srobichaud/source/MobileSdk/android/staging/mobile-sdk-cdp-android/repository') }
-        maven { url uri('/Users/srobichaud/source/MobileSdk/android/staging/MarketingCloudSdk-Android/repository') }
         maven { url "https://salesforce-marketingcloud.github.io/MarketingCloudSDK-Android/repository" }
         maven { url "https://salesforce-marketingcloud.github.io/mobile-sdk-cdp-android/repository" }
     }
