@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>cdp</title>
+    <link href="images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
+<link href="styles/style.css" rel="Stylesheet">
+<link href="styles/main.css" rel="Stylesheet">
+<link href="styles/prism.css" rel="Stylesheet">
+<link href="styles/logo-styles.css" rel="Stylesheet">
+<link href="styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="index.html">
+                            cdp
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":cdp:dokkaHtml/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" id="content" pageIds="cdp::////PointingToDeclaration//918537743">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>cdp</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtml/release"><p class="paragraph">The Customer Data Platform (CDP) module for the Salesforce Marketing Cloud SDK.</p><h2 class="">Overview</h2><p class="paragraph">The CDP module enables integration with Salesforce Marketing Cloud's Customer Data Platform, allowing you to:</p><ul><li><p class="paragraph">Track user events and behaviors</p></li><li><p class="paragraph">Manage user profiles and attributes</p></li><li><p class="paragraph">Integrate with other Marketing Cloud services</p></li><li><p class="paragraph">Handle user consent management</p></li><li><p class="paragraph">Track location data</p></li><li><p class="paragraph">Manage session state</p></li></ul><h2 class="">Integration</h2><h3 class="">1. Add Dependencies</h3><p class="paragraph">Add the SFMC SDK and CDP module to your app's build.gradle:</p><div class="sample-container"><pre><code class="block lang-gradle" theme="idea">dependencies {<br>    implementation 'com.salesforce.marketingcloud:sfmcsdk:1.0.6'<br>    implementation 'com.salesforce.marketingcloud:cdp:${version}'<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">2. Initialize the SDK</h3><p class="paragraph">Initialize the SDK in your Application class:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">class MyApplication : Application() {<br>    override fun onCreate() {<br>        super.onCreate()<br>        <br>        // Configure the SFMC SDK with CDP module<br>        SFMCSdk.configure(this, SFMCSdkModuleConfig.build {<br>            // Configure CDP module<br>            cdpModuleConfig = CdpConfig.Builder(this, &quot;your-cdp-app-id&quot;, &quot;your-cdp-endpoint&quot;)<br>                .trackScreens(true)  // Enable screen tracking (default: false)<br>                .trackLifecycle(true)  // Enable lifecycle tracking (default: false)<br>                .sessionTimeout(600L)  // Set session timeout in seconds (default: 600)<br>                .build()<br>            <br>            // Configure other modules as needed<br>            // pushModuleConfig = ...<br>        }) { status -&gt;<br>            // Handle initialization status<br>            when (status.status) {<br>                InitializationStatus.SUCCESS -&gt; {<br>                    // SDK initialized successfully<br>                    CdpSdk.requestSdk { sdk -&gt;<br>                        // Set initial consent state if needed<br>                        sdk.consent = Consent.OPT_IN<br>                    }<br>                }<br>                InitializationStatus.FAILURE -&gt; {<br>                    // Handle initialization failure<br>                }<br>            }<br>        }<br>        <br>        // Optional: Request SDK state<br>        SFMCSdk.requestSdk { sdk -&gt;<br>            Log.d(&quot;MyApp&quot;, &quot;SDK State: ${sdk.getSdkState()}&quot;)<br>        }<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">3. Request the CDP SDK Instance</h3><p class="paragraph">To use CDP features in your activities or fragments:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">class MainActivity : AppCompatActivity() {<br>    override fun onCreate(savedInstanceState: Bundle?) {<br>        super.onCreate(savedInstanceState)<br>        <br>        // Request the CDP SDK instance<br>        CdpSdk.requestSdk { sdk -&gt;<br>            // Track an event<br>            sdk.track(Event.engagement(&quot;button_click&quot;, mapOf(<br>                &quot;button_id&quot; to &quot;login&quot;,<br>                &quot;screen&quot; to &quot;main&quot;<br>            )))<br>            <br>            // Set user consent<br>            sdk.consent = Consent.OPT_IN<br>            <br>            // Set location<br>            sdk.setLocation(Coordinates(37.7749, -122.4194), 3600L) // 1 hour expiration<br>        }<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h2 class="">Configuration Options</h2><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td>appId</td><td>String</td><td>Required. Your CDP Application ID in UUID format.</td></tr><tr><td>endpoint</td><td>String</td><td>Required. The endpoint URL for sending events.</td></tr><tr><td>trackScreens</td><td>Boolean</td><td>Optional. Enable automatic screen tracking. Default: false</td></tr><tr><td>trackLifecycle</td><td>Boolean</td><td>Optional. Enable automatic lifecycle tracking. Default: false</td></tr><tr><td>sessionTimeoutInSeconds</td><td>Long</td><td>Optional. Session timeout duration in seconds. Default: 600</td></tr></tbody></table><h2 class="">Features</h2><h3 class="">Event Tracking</h3><ul><li><p class="paragraph">Track user interactions and behaviors</p></li><li><p class="paragraph">Support for engagement, profile, and consent events</p></li><li><p class="paragraph">Automatic validation of event types and attributes</p></li><li><p class="paragraph">Built-in support for screen views and lifecycle events</p></li></ul><h3 class="">Consent Management</h3><ul><li><p class="paragraph">Track user consent preferences</p></li><li><p class="paragraph">Support for opt-in and opt-out states</p></li><li><p class="paragraph">Automatic consent state persistence</p></li><li><p class="paragraph">Integration with privacy regulations</p></li></ul><h3 class="">Location Tracking</h3><ul><li><p class="paragraph">Track user location with expiration</p></li><li><p class="paragraph">Automatic location updates</p></li><li><p class="paragraph">Geofencing support</p></li><li><p class="paragraph">Location-based event triggering</p></li></ul><h3 class="">Session Management</h3><ul><li><p class="paragraph">Automatic session tracking</p></li><li><p class="paragraph">Configurable session timeout</p></li><li><p class="paragraph">Session state persistence</p></li><li><p class="paragraph">Session-based event correlation</p></li></ul><h2 class="">Best Practices</h2><ol><li><p class="paragraph"><strong>Initialization</strong></p></li><ul><li><p class="paragraph">Initialize the SDK as early as possible in your Application class</p></li><li><p class="paragraph">Always provide valid configuration values</p></li><li><p class="paragraph">Handle initialization errors appropriately</p></li><li><p class="paragraph">Set up logging before initialization for debugging</p></li></ul><li><p class="paragraph"><strong>Event Tracking</strong></p></li><ul><li><p class="paragraph">Use meaningful event names</p></li><li><p class="paragraph">Include relevant attributes</p></li><li><p class="paragraph">Avoid using reserved event types</p></li><li><p class="paragraph">Validate event data before sending</p></li></ul><li><p class="paragraph"><strong>Consent Management</strong></p></li><ul><li><p class="paragraph">Always respect user consent choices</p></li><li><p class="paragraph">Update consent state when user preferences change</p></li><li><p class="paragraph">Never set consent to PENDING manually</p></li><li><p class="paragraph">Handle consent changes appropriately</p></li></ul><li><p class="paragraph"><strong>Location Tracking</strong></p></li><ul><li><p class="paragraph">Set appropriate expiration times</p></li><li><p class="paragraph">Consider battery impact</p></li><li><p class="paragraph">Handle location permission changes</p></li><li><p class="paragraph">Validate coordinates before sending</p></li></ul></ol><h2 class="">Troubleshooting</h2><p class="paragraph">Common issues and solutions:</p><ol><li><p class="paragraph"><strong>SDK Initialization Fails</strong></p></li><ul><li><p class="paragraph">Verify your configuration values</p></li><li><p class="paragraph">Check network connectivity</p></li><li><p class="paragraph">Ensure proper permissions are set</p></li><li><p class="paragraph">Review logcat for detailed error messages</p></li></ul><li><p class="paragraph"><strong>Events Not Being Tracked</strong></p></li><ul><li><p class="paragraph">Verify consent state</p></li><li><p class="paragraph">Check event validation</p></li><li><p class="paragraph">Ensure proper SDK initialization</p></li><li><p class="paragraph">Review event manager logs</p></li></ul><li><p class="paragraph"><strong>Location Updates Not Working</strong></p></li><ul><li><p class="paragraph">Verify location permissions</p></li><li><p class="paragraph">Check location services status</p></li><li><p class="paragraph">Ensure proper coordinate format</p></li><li><p class="paragraph">Review location manager logs</p></li></ul></ol></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="1248997684%2FPackages%2F918537743" anchor-label="com.salesforce.marketingcloud.cdp" id="1248997684%2FPackages%2F918537743" data-filterable-set=":cdp:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":cdp:dokkaHtml/release" data-filterable-set=":cdp:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="cdp/com.salesforce.marketingcloud.cdp/index.html">com.salesforce.marketingcloud.cdp</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1248997684%2FPackages%2F918537743"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-184717216%2FPackages%2F918537743" anchor-label="com.salesforce.marketingcloud.cdp.consent" id="-184717216%2FPackages%2F918537743" data-filterable-set=":cdp:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":cdp:dokkaHtml/release" data-filterable-set=":cdp:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="cdp/com.salesforce.marketingcloud.cdp.consent/index.html">com.salesforce.marketingcloud.cdp.consent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-184717216%2FPackages%2F918537743"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="761060417%2FPackages%2F918537743" anchor-label="com.salesforce.marketingcloud.cdp.encryption" id="761060417%2FPackages%2F918537743" data-filterable-set=":cdp:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":cdp:dokkaHtml/release" data-filterable-set=":cdp:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="cdp/com.salesforce.marketingcloud.cdp.encryption/index.html">com.salesforce.marketingcloud.cdp.encryption</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="761060417%2FPackages%2F918537743"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1232901033%2FPackages%2F918537743" anchor-label="com.salesforce.marketingcloud.cdp.events" id="-1232901033%2FPackages%2F918537743" data-filterable-set=":cdp:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":cdp:dokkaHtml/release" data-filterable-set=":cdp:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="cdp/com.salesforce.marketingcloud.cdp.events/index.html">com.salesforce.marketingcloud.cdp.events</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1232901033%2FPackages%2F918537743"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1640339213%2FPackages%2F918537743" anchor-label="com.salesforce.marketingcloud.cdp.location" id="-1640339213%2FPackages%2F918537743" data-filterable-set=":cdp:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":cdp:dokkaHtml/release" data-filterable-set=":cdp:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="cdp/com.salesforce.marketingcloud.cdp.location/index.html">com.salesforce.marketingcloud.cdp.location</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1640339213%2FPackages%2F918537743"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2025 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
